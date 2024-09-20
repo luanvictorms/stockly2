@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "./_components/sidebar";
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'auto',
-})
+  subsets: ["latin"],
+  display: "auto",
+});
 
 export const metadata: Metadata = {
   title: "Stockly",
@@ -20,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        <div className="flex gap-8 h-full">
+      <body className={`${inter.className} antialiased`}>
+        <div className="flex h-full">
           <Sidebar />
           {children}
         </div>
