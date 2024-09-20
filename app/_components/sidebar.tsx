@@ -1,3 +1,6 @@
+import { Button } from "./ui/button";
+import { LayoutGrid, PackageIcon, ShoppingBasketIcon } from "lucide-react";
+
 const Sidebar = () => {
   return (
     <div className="w-64 bg-white">
@@ -7,9 +10,18 @@ const Sidebar = () => {
       </div>
       {/* BOTOES */}
       <div className="flex flex-col gap-2 p-2">
-        <button className="px-6 py-3">Dashboard</button>
-        <button className="px-6 py-3">Produtos</button>
-        <button className="px-6 py-3">Vendas</button>
+        <Button variant={"ghost"} className="justify-start gap-1">
+          <LayoutGrid size={20} />
+          Dashboard
+        </Button>
+        <Button variant={"ghost"} className="justify-start gap-1">
+          <PackageIcon size={20} />
+          Produtos
+        </Button>
+        <Button variant={"ghost"} className="justify-start gap-1">
+          <ShoppingBasketIcon size={20} />
+          Vendas
+        </Button>
       </div>
     </div>
   );
